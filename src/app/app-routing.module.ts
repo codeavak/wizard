@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PinfoComponent } from './components/pinfo/pinfo.component';
-import { CinfoComponent } from './components/cinfo/cinfo.component';
-import { JobsComponent } from './components/jobs/jobs.component';
-import { SkillsComponent } from './components/skills/skills.component';
+import { PinfoComponent } from './personal/pinfo/pinfo.component';
+import { CinfoComponent } from './personal/cinfo/cinfo.component';
+import { JobsComponent } from './skills/jobs/jobs.component';
+import { SkillsComponent } from './skills/skills/skills.component';
 import { SuccessComponent } from './components/success/success.component';
 
 const routes: Routes = [{path:"pinfo",component:PinfoComponent},
