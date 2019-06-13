@@ -26,6 +26,11 @@
   <div class="col-md-5">
     <input type="text" class="form-control mb-2" placeholder="First Name" />
     <input type="text" class="form-control mb-2" placeholder="Last Name" />
+
+    <select class="form-control" (change)='printCountry($event.target.value)'>
+      <option *ngFor="let country of Countries" >{{country}}</option>
+    </select>
+
   </div>
 
   <button class="btn btn-info float-right mt-5" routerLink="/cinfo">

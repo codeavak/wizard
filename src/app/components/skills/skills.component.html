@@ -21,11 +21,14 @@
   </div>
 </div>
 <div class="card-footer bg-transparent border-success min-h-300">
-  <h4 class="mb-5"><b>STEP 3: Skills</b></h4>
+  <h4 class="mb-5" ><b>STEP 3: Skills</b></h4>
   <div class="col-md-5">
-    <input type="text" class="form-control mb-2" placeholder="Skill1" />
-    <input type="text" class="form-control mb-2" placeholder="Skill2" />
-    <input type="text" class="form-control mb-2" placeholder="Skill3" />
+    
+    <div *ngFor="let item of Skills;let index = index;" class="mb-1">
+      <input [(ngModel)]="Skills[index].skill" placeholder="Skills[index].skill" (blur)='onSkillTxtBlur()' [style.color]="(!Skills[index].duplicate)?'black':'red'" >
+    <button class="btn btn-danger ml-2 btn-sm" (click)='removeSkill(index)'>-</button>
+    </div>
+    <button class="btn btn-success" (click)='addSkill()'>+</button>
   </div>
   <button class="btn btn-info float-right mt-5 ml-2" routerLink="/jobs">
     Next
